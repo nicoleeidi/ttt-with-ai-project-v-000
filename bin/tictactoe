@@ -12,14 +12,14 @@ input= gets.strip
 puts "Who should go first and be X? Select from: computer, human "
 firstplayer= gets.strip
 
-if input == 0
+if input == "0"
   game= Game.new(Players::Computer.new("X"),Players::Human.new("O"),board= Board.new)
-elsif input == 1
+elsif input == "1"
   game= Game.new(Players::Human.new("X"),Players::Human.new("O"),board= Board.new)
-elsif input == 2
-  if firstplayer == human
+elsif input == "2"
+  if firstplayer == "human"
     game= Game.new(Players::Human.new("X"),Players::Computer.new("O"),board= Board.new)
-  elsif firstplayer == computer
+  elsif firstplayer == "computer"
     game= Game.new(Players::Computer.new("X"),Players::Human.new("O"),board= Board.new)
   end
 end
