@@ -14,9 +14,9 @@ firstplayer= gets.strip
 
 if input == "0"
   game= Game.new(Players::Computer.new("X"),Players::Human.new("O"),board= Board.new)
-elsif input == "1"
-  game= Game.new(Players::Human.new("X"),Players::Human.new("O"),board= Board.new)
 elsif input == "2"
+  game= Game.new(Players::Human.new("X"),Players::Human.new("O"),board= Board.new)
+elsif input == "1"
   if firstplayer == "human"
     game= Game.new(Players::Human.new("X"),Players::Computer.new("O"),board= Board.new)
   elsif firstplayer == "computer"
